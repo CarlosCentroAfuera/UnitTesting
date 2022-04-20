@@ -17,7 +17,7 @@ public class Clase1 {
             System.out.println("Has conseguido acertar la pass");
         else
             System.out.println("No has conseguido acertar la pass");
-
+        // Añado esto por un ejemplo de Git
     }
 
     private static boolean comprobarPass(Scanner sc, String pass) {
