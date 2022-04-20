@@ -1,9 +1,11 @@
+package paqueteclase2;
+
 import java.util.Scanner;
 
 public class ListaUsuarios {
     Usuario[] usuarios;
 
-    ListaUsuarios() {
+    public ListaUsuarios() {
         Usuario u1 = new Usuario("Antonio", "1234");
         Usuario u2 = new Usuario();
         System.out.println(u2);

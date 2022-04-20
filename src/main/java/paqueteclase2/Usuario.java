@@ -1,3 +1,5 @@
+package paqueteclase2;
+
 import java.util.Scanner;
 
 public class Usuario {
@@ -13,7 +15,7 @@ public class Usuario {
         this.nombre = sc.nextLine();
         System.out.println("Introduce la pass del usuario " + this.nombre);
         this.pass = sc.nextLine();
-        System.out.println("Usuario creado correctamente");
+        System.out.println("paquete.Usuario creado correctamente");
     }
 
     Usuario(String nombre, String pass){

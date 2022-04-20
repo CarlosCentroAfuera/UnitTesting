@@ -66,4 +66,6 @@ class Repaso1 {
                 ", num=" + num +
                 '}';
     }
+
+
 }

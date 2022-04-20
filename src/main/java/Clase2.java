@@ -1,3 +1,5 @@
+import paqueteclase2.ListaUsuarios;
+
 public class Clase2 {
     public static void main(String[] args) {
 
@@ -13,7 +15,7 @@ public class Clase2 {
         // Alerta Hackerman!
 
         if (l.iniciarSesion()){
-            System.out.println("Usuario logueado");
+            System.out.println("paquete.Usuario logueado");
         } else {
             System.out.println("Alerta Hackerman!");
         }
