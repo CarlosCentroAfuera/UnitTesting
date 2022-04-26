@@ -16,6 +16,9 @@ public class EjercicioContarNumeros {
 
     public static String contarRepeticiones(Integer[] arrayNum) {
 
+        if (arrayNum == null)
+            return null;
+
         HashMap<Integer, Integer> map = new HashMap<>();
         for (Integer num : arrayNum) {
             if (map.containsKey(num)) {

@@ -4,24 +4,50 @@ import org.junit.jupiter.api.Test;
 public class TestEjercicioContarNumeros {
 
     @Test
-    public void test1() {
-        Integer[] list = {1,2,3,4};
-        String result = EjercicioContarNumeros.contarRepeticiones(list);
-        Assertions.assertEquals(result, "{1=1, 2=1, 3=1, 4=1}");
+    public void testContarNumerosIguales(){
+        Integer[] input = {1,1,1,1};
+        String outputEsperado = "{1=4}";
+        String outputActual = EjercicioContarNumeros.contarRepeticiones(input);
+        Assertions.assertEquals(outputEsperado, outputActual);
     }
 
     @Test
-    public void test2() {
-        Integer[] list = {1,1,1,1};
-        String result = EjercicioContarNumeros.contarRepeticiones(list);
-        Assertions.assertEquals(result, "{1=4}");
+    public void testContarNumerosNoIguales(){
+        Integer[] input = {1,2,3,4};
+        String outputEsperado = "{1=1, 2=1, 3=1, 4=1}";
+        String outputActual = EjercicioContarNumeros.contarRepeticiones(input);
+        Assertions.assertEquals(outputEsperado, outputActual);
     }
-
 
     @Test
-    public void test3() {
-        Integer[] list = {1,1,1,1};
-        String result = EjercicioContarNumeros.contarRepeticiones(list);
-        Assertions.assertEquals(result, "{1=4}");
+    public void testContarNumerosMixtos(){
+        Integer[] input = {1,2,3,1};
+        String outputEsperado = "{1=2, 2=1, 3=1}";
+        String outputActual = EjercicioContarNumeros.contarRepeticiones(input);
+        Assertions.assertEquals(outputEsperado, outputActual);
     }
+
+    @Test
+    public void testContarNumerosNegativos(){
+        Integer[] input = {-1,2,3,1};
+        String outputEsperado = "{-1=1, 1=1, 2=1, 3=2}";
+        String outputActual = EjercicioContarNumeros.contarRepeticiones(input);
+        Assertions.assertEquals(outputEsperado, outputActual);
+    }
+
+    @Test
+    public void testContarNumerosSinNumeros(){
+        Integer[] input = {};
+        String outputEsperado = "{}";
+        String outputActual = EjercicioContarNumeros.contarRepeticiones(input);
+        Assertions.assertEquals(outputEsperado, outputActual);
+    }
+
+    @Test
+    public void testContarNumerosConNull(){
+        Integer[] input = null;
+        String outputActual = EjercicioContarNumeros.contarRepeticiones(input);
+        Assertions.assertNull(outputActual);
+    }
+
 }
